@@ -1,0 +1,52 @@
+.app-header {
+    display: flex;
+    justify-content: space-between; /* Separa los elementos principales */
+    align-items: center;
+    background-color: #004445; /* Color de fondo */
+    padding: 1rem 2rem;
+    color: #FFFFFF;
+  
+    .logo {
+      h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #6FB98F; /* Color del logo */
+      }
+    }
+  
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      flex: 1; /* Ocupa el espacio entre el logo y la autenticación */
+      margin-left: 5%;
+
+      .left-nav,
+      .right-nav {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .left-nav {
+        flex: 1; /* Ocupa el espacio a la izquierda */
+      }
+  
+      .right-nav {
+        justify-content: flex-end; /* Alinea a la derecha */
+      }
+  
+      li a {
+        text-decoration: none;
+        color: #FFFFFF;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: #2C7873; /* Color al pasar el mouse */
+        }
+      }
+    }
+  }
+  

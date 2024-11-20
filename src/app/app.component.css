@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima de toda la ventana */
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1; /* Este contenedor ocupa el espacio restante */
+  }
+  

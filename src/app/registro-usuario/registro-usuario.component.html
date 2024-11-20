@@ -1,0 +1,99 @@
+<div class="registro-container">
+    <h2>Registro de Usuario</h2>
+    <form (ngSubmit)="onSubmit()" #registroForm="ngForm">
+      <!-- Nombre -->
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input 
+          type="text" 
+          id="nombre" 
+          name="nombre" 
+          [(ngModel)]="usuario.nombre" 
+          class="form-control" 
+          required 
+          placeholder="Ej: Sebastian Galeano" />
+      </div>
+  
+      <!-- Edad -->
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input 
+          type="number" 
+          id="edad" 
+          name="edad" 
+          [(ngModel)]="usuario.edad" 
+          class="form-control" 
+          required 
+          min="18" />
+      </div>
+  
+      <!-- Descripción -->
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea 
+          id="descripcion" 
+          name="descripcion" 
+          [(ngModel)]="usuario.descripcion" 
+          class="form-control" 
+          rows="3" 
+          placeholder="Describe tu perfil o actividad"></textarea>
+      </div>
+  
+      <!-- Teléfono -->
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input 
+          type="tel" 
+          id="telefono" 
+          name="telefono" 
+          [(ngModel)]="usuario.telefono" 
+          class="form-control" 
+          required 
+          placeholder="Ej: +34 123 456 789" />
+      </div>
+  
+      <!-- Credenciales -->
+      <div class="form-group">
+        <label for="username">Nombre de Usuario</label>
+        <input 
+          type="text" 
+          id="username" 
+          name="username" 
+          [(ngModel)]="usuario.credencial.username" 
+          class="form-control" 
+          required 
+          placeholder="Ej: elsebasgaleano" />
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          [(ngModel)]="usuario.credencial.password" 
+          class="form-control" 
+          required />
+      </div>
+  
+      <!-- Rol -->
+      <div class="form-group">
+        <label for="rol">Rol</label>
+        <select 
+          id="rol" 
+          name="rol" 
+          [(ngModel)]="usuario.credencial.rol" 
+          class="form-control" 
+          required>
+          <option value="" disabled selected>Selecciona un rol</option>
+          <option value="PROVEEDOR">Proveedor</option>
+          <option value="COMPRADOR">Comprador</option>
+          <option value="ADMINISTRADOR">Administrador</option>
+        </select>
+      </div>
+  
+      <!-- Botón de registro -->
+      <button type="submit" class="btn btn-primary" [disabled]="!registroForm.valid">Registrar</button>
+    </form>
+  </div>
+  

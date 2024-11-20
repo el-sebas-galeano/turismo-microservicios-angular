@@ -1,0 +1,38 @@
+.footer {
+    background-color: #2C7873; 
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+  
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  
+    .footer-column {
+      flex: 1 1 30%; 
+      max-width: 300px; 
+      margin: 10px;
+      text-align: center;
+  
+      .student-photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover; 
+        margin-bottom: 10px;
+      }
+  
+      h3 {
+        margin: 10px 0 5px;
+        font-size: 18px;
+      }
+  
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+  

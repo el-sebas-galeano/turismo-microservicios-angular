@@ -1,0 +1,26 @@
+<header class="app-header">
+    <!-- Logo -->
+    <div class="logo">
+      <h1>Turismo!</h1>
+    </div>
+  
+    <!-- Navegación principal -->
+    <nav class="navigation">
+      <ul class="left-nav">
+        <li><a href="/home">Home</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a *ngIf="isLoggedIn" href="#">Actividades</a></li>
+        <li><a *ngIf="isLoggedIn" href="#">Restaurantes</a></li>
+        <li><a *ngIf="isLoggedIn" href="#">Hospedaje</a></li>
+        <li><a *ngIf="isLoggedIn" href="#">Voluntariado</a></li>
+        <li><a *ngIf="isLoggedIn" href="#">Transporte</a></li>
+      </ul>
+  
+      <!-- Navegación secundaria (autenticación) -->
+      <ul class="right-nav" *ngIf="!isLoggedIn">
+        <li><a href="/login">Login</a></li>
+        <li><a href="/registro" routerLink="/registrarse">Registrarse</a></li>
+      </ul>
+    </nav>
+  </header>
+  

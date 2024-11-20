@@ -1,0 +1,40 @@
+<div class="home-container">
+    <h1>¡Bienvenido a Turismo!</h1>
+    <p>
+        Descubre la belleza de la naturaleza con nuestra oferta de turismo
+        ecológico.
+    </p>
+
+    <!-- Contenido según el rol -->
+    <div *ngIf="userRole === 'PROVEEDOR'; else otherRoles">
+        <h2>Panel del Proveedor</h2>
+        <p>
+            Accede a tus ofertas de ecoturismo, gestiona tus paquetes y consulta las
+            reservas realizadas por los clientes.
+        </p>
+        <button routerLink="/proveedor/ofertas">Gestionar Servicios</button>
+        <button routerLink="/proveedor/reservas">Ver Mis Servicios</button>
+    </div>
+
+    <ng-template #otherRoles>
+        <div *ngIf="userRole === 'COMPRADOR'; else adminPanel">
+            <h2>¡Explora nuestras aventuras!</h2>
+            <p>
+                Reserva tours ecológicos únicos y disfruta de la belleza natural con
+                nuestros guías certificados.
+            </p>
+            <button routerLink="/cliente/tours">Explorar Tours</button>
+            <button routerLink="/cliente/reservas">Mis Compras</button>
+        </div>
+        <ng-template #adminPanel>
+            <div *ngIf="userRole === 'ADMINISTRADOR'">
+                <h2>Panel de Administración</h2>
+                <p>
+                    Gestiona las operaciones, supervisa las actividades de proveedores y
+                    clientes, y asegura la calidad del servicio.
+                </p>
+                <button routerLink="/admin/usuarios">Gestionar Usuarios</button>
+                <button routerLink="/admin/reportes">Ver Reportes</button>
+            </div>
+        </ng-template>
+    </ng-template>
