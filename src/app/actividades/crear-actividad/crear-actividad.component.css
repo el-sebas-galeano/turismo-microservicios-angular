@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF; /* Fondo blanco */
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .form-container {
+    background-color: #FFFFFF; /* Fondo blanco */
+    padding: 30px;
+    border: 2px solid #004445; /* Cadet Blue */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #021C1E; /* Blue Black */
+    margin-bottom: 25px;
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .form-group .column {
+    width: 48%; /* Asegura que ambas columnas tengan el mismo ancho */
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    color: #2C7873; /* Rain */
+    margin-bottom: 5px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #2C7873; /* Rain */
+    border-radius: 5px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #021C1E; /* Blue Black */
+    box-sizing: border-box;
+  }
+  
+  input::placeholder, 
+  textarea::placeholder {
+    color: #6FB98F; /* Greenery */
+  }
+  
+  input[type="file"] {
+    padding: 8px;
+    background-color: #FFFFFF;
+    color: #021C1E; /* Blue Black */
+    border: 1px solid #2C7873; /* Rain */
+  }
+  
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: #6FB98F; /* Greenery */
+    color: #FFFFFF; /* Texto blanco */
+    border: 2px solid #004445; /* Cadet Blue */
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #004445; /* Cadet Blue */
+  }
+  
+  button:disabled {
+    background-color: #2C7873; /* Rain */
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 768px) {
+    /* Adaptación para pantallas más pequeñas */
+    .form-group {
+      flex-direction: column;
+    }
+  
+    .form-group .column {
+      width: 100%;
+    }
+  }
+  

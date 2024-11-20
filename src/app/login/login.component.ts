@@ -30,13 +30,25 @@ export class LoginComponent {
   onSubmit(): void {
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
+  
       this.authService.login(username, password).subscribe({
         next: (response) => {
           console.log('Login exitoso:', response);
-          const userRole = response?.credencial.rol;
-
+  
+          // Extrae datos del cuerpo de la respuesta
+          const userRole = response.body?.credencial?.rol;
+          const userId = response.body?.idUsuario;
+  
+          // Guarda rol y estado de sesión
           this.sessionService.setLoginState(true, userRole);
-          this.showLoginSuccess(response?.nombre);
+          if (userId) {
+            this.sessionService.setUserId(userId);
+          }
+  
+          console.log('Rol del usuario:', this.sessionService.getRole());
+          console.log('ID del usuario:', this.sessionService.getUserId());
+  
+          this.showLoginSuccess(response.body?.nombre);
         },
         error: (error) => {
           console.error('Error al iniciar sesión:', error);
@@ -48,6 +60,8 @@ export class LoginComponent {
       console.log('Formulario no válido');
     }
   }
+  
+
 
   goToRegister(): void {
     this.router.navigate(['/registro']);

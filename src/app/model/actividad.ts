@@ -14,6 +14,7 @@ export class Actividad extends Servicio {
 
     constructor(
         idServicio: number,
+        idUsuario: number,
         nombre: string,
         descripcion: string,
         estado: String,
@@ -30,7 +31,7 @@ export class Actividad extends Servicio {
         ubicacionLongitud: number,
         nombreUbicacion: string
     ) {
-        super(idServicio, nombre, descripcion, estado, foto, fotosDescripcion, calificaciones);
+        super(idServicio, idUsuario, nombre, descripcion, estado, foto, fotosDescripcion, calificaciones);
         this.tipoActividad = tipoActividad;
         this.duracion = duracion;
         this.nivelDificultad = nivelDificultad;

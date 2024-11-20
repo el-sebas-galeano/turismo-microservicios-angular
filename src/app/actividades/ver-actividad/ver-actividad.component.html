@@ -1,0 +1,42 @@
+<div class="actividad-container">
+    <div class="actividad-card" *ngIf="actividad">
+      <div class="actividad-header">
+        <img [src]="actividad?.foto" alt="Foto de la actividad" class="actividad-image" />
+        <h2>{{ actividad?.nombre }}</h2>
+        <p class="actividad-description">{{ actividad?.descripcion }}</p>
+      </div>
+  
+      <div class="actividad-details">
+        <div class="actividad-detail-item">
+          <strong>Tipo de Actividad:</strong> {{ actividad?.tipoActividad }}
+        </div>
+        <div class="actividad-detail-item">
+          <strong>Duración:</strong> {{ actividad?.duracion }} horas
+        </div>
+        <div class="actividad-detail-item">
+          <strong>Nivel de Dificultad:</strong> {{ actividad?.nivelDificultad }}
+        </div>
+        <div class="actividad-detail-item">
+          <strong>Precio:</strong> ${{ actividad?.precio }}
+        </div>
+        <div class="actividad-detail-item">
+          <strong>Capacidad Máxima:</strong> {{ actividad?.capacidadMaxima }}
+        </div>
+        <div class="actividad-detail-item">
+          <strong>Ubicación:</strong> {{ actividad?.nombreUbicacion }}
+        </div>
+        <div class="actividad-detail-item">
+            <strong>Requerimientos:</strong> {{ actividad?.requerimientos }}
+          </div>
+      </div>
+  
+      <div class="actividad-footer">
+        <button (click)="verMapa()" class="ver-mapa-btn">Ver Mapa</button>
+      </div>
+    </div>
+  
+    <div *ngIf="!actividad" class="loading">
+      Cargando actividad...
+    </div>
+  </div>
+  

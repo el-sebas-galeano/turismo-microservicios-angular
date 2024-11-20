@@ -1,0 +1,74 @@
+.actividad-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .actividad-card {
+    background-color: #FFFFFF;
+    border: 2px solid #004445; /* Cadet Blue */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+  }
+  
+  .actividad-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #004445;
+  }
+  
+  .actividad-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .actividad-header h2 {
+    color: #021C1E;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .actividad-description {
+    color: #2C7873;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .actividad-details {
+    padding: 20px;
+    background-color: #F9F9F9; /* Fondo claro para resaltar el contenido */
+  }
+  
+  .actividad-detail-item {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .actividad-detail-item strong {
+    color: #021C1E;
+  }
+  
+  .actividad-footer {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .ver-mapa-btn {
+    background-color: #6FB98F; /* Greenery */
+    color: #FFFFFF;
+    border: 2px solid #004445;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ver-mapa-btn:hover {
+    background-color: #004445; /* Cadet Blue */
+  }
+  

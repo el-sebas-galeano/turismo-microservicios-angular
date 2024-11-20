@@ -2,6 +2,7 @@ import { Calificacion } from "./calificacion";
 
 export abstract class Servicio {
     idServicio: number;
+    idUsuario: number;
     nombre: string;
     descripcion: string;
     estado: String;
@@ -11,6 +12,7 @@ export abstract class Servicio {
 
     constructor(
         idServicio: number,
+        idUsuario: number,
         nombre: string,
         descripcion: string,
         estado: String,
@@ -19,6 +21,7 @@ export abstract class Servicio {
         calificaciones: Calificacion[]
     ) {
         this.idServicio = idServicio;
+        this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.estado = estado;

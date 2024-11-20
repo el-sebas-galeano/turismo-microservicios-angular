@@ -14,6 +14,7 @@ export class Transporte extends Servicio {
 
     constructor(
         idServicio: number,
+        idUsuario: number,
         nombre: string,
         descripcion: string,
         estado: String,
@@ -30,7 +31,7 @@ export class Transporte extends Servicio {
         destinoLatitud: number,
         destinoLongitud: number
     ) {
-        super(idServicio, nombre, descripcion, estado, foto, fotosDescripcion, calificaciones);
+        super(idServicio, idUsuario, nombre, descripcion, estado, foto, fotosDescripcion, calificaciones);
         this.tipoTransporte = tipoTransporte;
         this.fechaSalida = fechaSalida;
         this.fechaLlegada = fechaLlegada;

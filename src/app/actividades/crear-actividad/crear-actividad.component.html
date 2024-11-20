@@ -1,0 +1,74 @@
+<div class="form-container">
+    <h1>Crear Actividad</h1>
+    <form [formGroup]="actividadForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <div class="column">
+                <!-- Nombre -->
+                <label for="nombre">Nombre de la actividad</label>
+                <input type="text" id="nombre" formControlName="nombre" placeholder="Ingrese el nombre">
+
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" formControlName="descripcion"
+                    placeholder="Ingrese la descripción"></textarea>
+
+                <!-- Tipo de Actividad -->
+                <label for="tipoActividad">Tipo de Actividad</label>
+                <select id="tipoActividad" formControlName="tipoActividad">
+                    <option *ngFor="let tipo of tiposActividad" [value]="tipo">{{ tipo }}</option>
+                </select>
+
+                <!-- Duración -->
+                <label for="duracion">Duración (horas)</label>
+                <input type="number" id="duracion" formControlName="duracion" placeholder="Ingrese la duración">
+
+                <!-- Precio -->
+                <label for="precio">Precio ($)</label>
+                <input type="number" id="precio" formControlName="precio" placeholder="Ingrese el precio">
+
+                <!-- Latitud de Ubicación -->
+                <label for="ubicacionLatitud">Latitud de Ubicación</label>
+                <input type="number" id="ubicacionLatitud" formControlName="ubicacionLatitud"
+                    placeholder="Ingrese la latitud">
+            </div>
+
+            <div class="column">
+                <!-- Nivel de Dificultad -->
+                <label for="nivelDificultad">Nivel de Dificultad</label>
+                <select id="nivelDificultad" formControlName="nivelDificultad">
+                    <option *ngFor="let nivel of nivelesDificultad" [value]="nivel">{{ nivel }}</option>
+                </select>
+
+                <!-- Requerimientos -->
+                <label for="requerimientos">Requerimientos</label>
+                <textarea id="requerimientos" formControlName="requerimientos"
+                    placeholder="Ingrese los requerimientos"></textarea>
+
+                <!-- Capacidad Máxima -->
+                <label for="capacidadMaxima">Capacidad Máxima</label>
+                <input type="number" id="capacidadMaxima" formControlName="capacidadMaxima"
+                    placeholder="Ingrese la capacidad">
+
+                <!-- Longitud de Ubicación -->
+                <label for="ubicacionLongitud">Longitud de Ubicación</label>
+                <input type="number" id="ubicacionLongitud" formControlName="ubicacionLongitud"
+                    placeholder="Ingrese la longitud">
+
+                <!-- Nombre de la Ubicación -->
+                <label for="nombreUbicacion">Nombre de la Ubicación</label>
+                <input type="text" id="nombreUbicacion" formControlName="nombreUbicacion"
+                    placeholder="Ingrese el nombre de la ubicación">
+
+                <!-- Estado -->
+                <label for="estado">Estado</label>
+                <select id="estado" formControlName="estado">
+                    <option value="DISPONIBLE">DISPONIBLE</option>
+                    <option value="NO_DISPONIBLE">NO_DISPONIBLE</option>
+                    <option value="SUSPENDIDO">EN SUSPENDIDO</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit" [disabled]="actividadForm.invalid">Crear Actividad</button>
+    </form>
+</div>

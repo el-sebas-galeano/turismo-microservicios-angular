@@ -12,6 +12,7 @@ export class Alimentacion extends Servicio {
 
     constructor(
         idServicio: number,
+        idUsuario: number,
         nombre: string,
         descripcion: string,
         estado: String,
@@ -26,7 +27,7 @@ export class Alimentacion extends Servicio {
         ubicacionLongitud: number,
         nombreUbicacion: string
     ) {
-        super(idServicio, nombre, descripcion, estado, foto, fotosDescripcion, calificaciones);
+        super(idServicio, idUsuario, nombre, descripcion, estado, foto, fotosDescripcion, calificaciones);
         this.tipoCocina = tipoCocina;
         this.horaMinima = horaMinima;
         this.horaMaxima = horaMaxima;

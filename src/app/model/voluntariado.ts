@@ -14,6 +14,7 @@ export class Voluntariado extends Servicio {
 
     constructor(
         idServicio: number,
+        idUsuario: number,
         nombre: string,
         descripcion: string,
         estado: String,
@@ -30,7 +31,7 @@ export class Voluntariado extends Servicio {
         costo: number,
         beneficios: string[]
     ) {
-        super(idServicio, nombre, descripcion, estado, foto, fotosDescripcion, calificaciones);
+        super(idServicio, idUsuario, nombre, descripcion, estado, foto, fotosDescripcion, calificaciones);
         this.objetivo = objetivo;
         this.duracion = duracion;
         this.actividades = actividades;
